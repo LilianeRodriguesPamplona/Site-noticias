@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Best Hacker News</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.js"></script>
+
+	</head>
+	<body class="is-preload">
+
+				<!-- Main -->
+					<div id="main">
+							<section>
+								<div class="image main" data-position="center" width="100%">
+									<img src="images/banner.jpg" alt="" width="100%"/>
+									<div class="container">
+										<header class="major">
+											<h2>Best Hacker News</h2>
+											<p>Just an incredibly simple responsive site with hot news</p>
+										</header>
+									</div>
+								</div>
+							</section>
+							<section>
+								<div class="container" id="app" data-position="center"> 
+									<div class="table-wrapper">
+										<div id="center_title">
+											<h2>Most Viewed Last News</h2>
+										</div>
+									<table>
+										<thead>
+											<tr>
+												<th>Index</th>
+												<th>Title</th>
+												<th>Story By</th>
+												<th>Url</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr v-for="(item, index) in array_historias">
+											<th scope="row" class="active">{{ index + 1 }}</th>
+											<td style="width: 15em;">{{ item.title }}</td>
+											<td>{{ item.by }}</td>
+											<td><a :href="item.url" target="_blank">{{ item.url }}</a></td>
+											</tr>
+										</tbody>
+									</table>
+									</div>
+								</div>
+							</section>
+					</div>
+
+		<!-- Scripts -->
+			<script src="funcoes.js"></script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
